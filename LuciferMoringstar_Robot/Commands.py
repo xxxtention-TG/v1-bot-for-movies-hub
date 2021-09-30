@@ -88,7 +88,6 @@ async def start(bot, message):
                     ],
                     [
                         InlineKeyboardButton('📣 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/MOVIES_HUB66')
-                        InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url='https://t.me/movieshub_group')
                     ]
                     ]
                 await bot.send_cached_media(
