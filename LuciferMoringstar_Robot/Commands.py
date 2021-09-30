@@ -84,10 +84,11 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('🔍 𝙎𝙀𝘼𝙍𝘾𝙃 𝘼𝙂𝘼𝙄𝙉 🔎', switch_inline_query_current_chat='')
                     ],
                     [
-                        InlineKeyboardButton('🔍 Search again 🔎', switch_inline_query_current_chat='')
+                        InlineKeyboardButton('📣 𝘾𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/MOVIES_HUB66')
+                        InlineKeyboardButton('𝙂𝙍𝙊𝙐𝙋', url='https://t.me/movieshub_group')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -112,18 +113,25 @@ async def start(bot, message):
             )
         )
     else:
-        await message.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+        await cmd.reply_video(
+            video="https://telegra.ph/file/97acce40b4887718a455c.mp4",
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
-                [[
-                InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                InlineKeyboardButton("More Botz", url="https://t.me/MT_Botz")
-                ],[
-                InlineKeyboardButton("Help", callback_data="help"),
-                InlineKeyboardButton("About", callback_data="about")
-                ]]
+                [
+                    [
+                        InlineKeyboardButton("➕️Add Me To Your Chats ➕️", url='http://t.me/MH_AUTO_FILTER_V1_BOT?startgroup=botstart'),
+                    ],
+                   [
+                       InlineKeyboardButton("CHANNEL", url='https://t.me/MOVIES_HUB66'),
+                       InlineKeyboardButton("GROUP", url='https://t.me/movieshub_group'),
+                    ],
+                     [
+                       InlineKeyboardButton("♂️Search Here♂️", switch_inline_query_current_chat=''),
+                       InlineKeyboardButton("🔥Dev🔥", url='https://t.me/darkz_angel'),
+                    ],
+                     [ InlineKeyboardButton("😈?ഞാൻ ആരാണെന്ന് അറിയണോ?😈", url='https://t.me/ADMOVEIADuwiwwj')
+                    ]
+                ]
             )
         )
         StopPropagation
